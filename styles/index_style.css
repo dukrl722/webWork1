@@ -7,6 +7,10 @@ body {
     border: 1px solid #000;
 }
 
+.navbar{
+    background-color: rgb(221, 197, 197);
+}
+
 #dv1 {
     width: 700px;
     height: 500px;
@@ -16,7 +20,6 @@ body {
 }
 
 #dv1 #login {
-    background-color: brown;
     width: 700px;
     height: 150px;
     text-align: center;

@@ -1,0 +1,43 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#logo{
+    background-color:black;
+    border: 1px solid #000;
+}
+
+.navbar{
+    background-color: rgb(221, 197, 197);
+}
+
+#_info_{
+    width: 20%;
+    height: 20%;
+    background-color: antiquewhite;
+    text-align: center;
+    align-items: center;
+}
+
+#home_div .enter input {
+    width: 30%;
+    border: 1px solid;
+}
+
+#home_div {
+    width: 60%;
+    height: 80%;
+    background-color: aquamarine;
+    margin-top: -3%;
+    margin-left: 22%;
+    border: 1px solid #000;
+}
+
+#protocolos {
+    width: 60%;
+    height: 80%;
+    background-color: aquamarine;
+    margin-top: 1%;
+    margin-left: 22%;
+    border: 1px solid #000;
+}

@@ -15,18 +15,32 @@ body {
     border: 1px solid #000;
 }
 
+.navbar{
+    background-color: rgb(221, 197, 197);
+}
+
 #dv1 #signup {
-    background-color: brown;
     width: 700px;
-    height: 150px;
+    height: 200px;
     text-align: center;
 }
 #dv1 #signup input {
-    margin-top: 10px;
+    margin-left: 3%;
+    margin-top: 1%;
     font-size: large;
 }
+#dv1 #signup #signup_re_pass{
+    margin-right: 8%;
+}
+
+#dv1 #signup #user_type{
+    color: #000;
+    display:block;
+    width: 50%;
+    margin-left: 31%;
+}
 #dv1 #signup button {
-    margin-top: 10px;
+    margin-right: 5%;
     width: 80px;
     height: 30px;
     font-size: medium;
