@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Usuário</title>
+    <link rel="stylesheet" href="../../styles/cadastro_cadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="telatotal">
+	<div id="logo">
+            <nav class="navbar">
+                <div>
+                    <a href="../index.html">
+                        <img src="../../images/utf_logo.jpg" alt="logo_utf" width="300" height="100">
+                    </a>
+                </div>
+                <h1>Serviço de controle de estacionamento UTFPR</h1>
+                <a class="navbar-brand" href="../admin.html">ADM</a>
+            </nav>
+        </div>
+
+	<div class="container" id="dv1">
+        <h1>Cadastros para funcionários DESEG</h1>
+        <div class="row" id="veiculos">
+            <h2>Veículos</h2>
+            <form action="#">
+                <label>Tipo</label>
+                <input type="text" name="tipo" style="margin-left: 20%;">
+                <label>Modelo</label>
+                <input type="text" name="modelo" style="margin-left: 20%;">
+                <label>Fabricante</label>
+                <input type="text" name="fabricante" style="margin-left: 20%;">
+                <label>Placa</label>
+                <input type="text" name="placa" style="margin-left: 20%;">
+                <label>Cor</label>
+                <input type="text" name="cor" style="margin-left: 20%;">
+                <input type="submit" name="bt_veiculo">
+            </form>
+        </div>
+        <div class="row" id="servidores">
+            <h2>Servidores</h2>
+            <form action="#">
+                <label>Nome</label>
+                <input type="text" name="s_nome" style="margin-left: 20%;">
+                <label>Telefone</label>
+                <input type="text" name="s_telefone" style="margin-left: 20%;">
+                <label>Ramal</label>
+                <input type="text" name="ramal" style="margin-left: 20%;">
+                <label>Sala</label>
+                <input type="text" name="sala" style="margin-left: 20%;">
+                <label>Cargo</label>
+                <input type="text" name="cargo" style="margin-left: 20%;">
+                <label>Matricula</label>
+                <input type="text" name="numero_matricula" style="margin-left: 20%;">
+                <label>E-mail</label>
+                <input type="text" name="s_email" style="margin-left: 20%;">
+                <input type="submit" name="bt_servidor">
+            </form>
+        </div>
+        <div class="row" id="alunos">
+            <h2>Alunos</h2>
+            <form action="#">
+                <label>Nome</label>
+                <input type="text" name="a_nome" style="margin-left: 20%;">
+                <label>Curso</label>
+                <input type="text" name="curso" style="margin-left: 20%;">
+                <label>RA</label>
+                <input type="text" name="ra" style="margin-left: 20%;">
+                <label>Telefone</label>
+                <input type="text" name="a_telefone" style="margin-left: 20%;">
+                <label>E-mail</label>
+                <input type="text" name="a_email" style="margin-left: 20%;">
+                <input type="submit" name="bt_aluno">
+            </form>
+        </div>
+        <div class="row" id="visitantes">
+            <h2>Visitantes</h2>
+            <form action="#">
+                <label>Nome</label>
+                <input type="text" name="v_nome" style="margin-left: 20%;">
+                <label>CPF</label>
+                <input type="text" name="cpf" style="margin-left: 20%;">
+                <label>Telefone</label>
+                <input type="text" name="v_telefone" style="margin-left: 20%;">
+                <label>E-mail</label>
+                <input type="text" name="v_email" style="margin-left: 20%;">
+                <input type="submit" name="bt_visitante">
+            </form>
+        </div>
+        <div class="row" id="visitantes">
+            <h2>Estacionamentos</h2>
+            <form action="#">
+                <label>ID</label>
+                <input type="text" name="id" style="margin-left: 20%;">
+                <label>Descrição</label>
+                <input type="text" name="descricao" style="margin-left: 20%;">
+                <input type="submit" name="bt_estacionamento">
+            </form>
+        </div>
+    </div>
+
+	<footer id="rodape">
+            <p>Universidade Tecnológica Federal do Paraná</p>
+            <a href="http://www.google.com" target="_blank">Suporte ao usuário</a>
+        </footer>
+    </div>
+    <script src="../../controllers/cadastro.js"></script>
+</body>
+</html>

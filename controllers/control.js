@@ -8,6 +8,11 @@ var users = `{"users":[
     {
         "name":"Admin",
         "senha":666,
+        "type":0
+    },
+    {
+        "name":"Josivaldo",
+        "senha":'mingaucomleite',
         "type":1
     },
     {
@@ -29,7 +34,7 @@ var veicles = `{"veiculos":[
         "fabricante":"Shing-Ling Enterprise",
         "placa":"12345",
         "cor":"preto"
-    },
+    }
 ]}`
 
 var srevis = `{"servidores":[
@@ -82,10 +87,11 @@ var alunos = JSON.parse(students)
 var visitantes = JSON.parse(visits)
 var estacionamentos = JSON.parse(estacis)
 
+
 //-----------------------------------------------
 
 function userTypeCheck(cbox){
-    let x = -1
+    let x = -1;
     for(let i=0; i<3; i++){
         if(cbox.children[i].checked == true){
             x = i+1;
@@ -124,11 +130,11 @@ function checkLogin(){
     var vetor = usuarios.users;
     for(let i=0; i<vetor.length; i++){
         if(vetor[i].name == n && vetor[i].senha == s){
-            console.log("Usuário encontrado");
-            return true;
+            return vetor[i].type;
         }
     }
     alert("Usuário não registrado");
+    return null;
 }
 
 function verificaCadastroAdmin(){
@@ -153,7 +159,7 @@ function cadastrarAdmin(tipo,infos){
             }
             novo_dado_cadastro += '}'
             new_dado_cadastro = JSON.parse(novo_dado_cadastro);
-            let tam = veiculos.veiculos.lenght;
+            tam = veiculos.veiculos.lenght;
             veiculos.veiculos[tam] = new_dado_cadastro;
             break
         case "servidor":
@@ -164,7 +170,7 @@ function cadastrarAdmin(tipo,infos){
             }
             novo_dado_cadastro += '}'
             new_dado_cadastro = JSON.parse(novo_dado_cadastro);
-            let tam = veiculos.veiculos.lenght;
+            tam = veiculos.veiculos.lenght;
             veiculos.veiculos[tam] = new_dado_cadastro;
             break
         case "aluno":
@@ -175,7 +181,7 @@ function cadastrarAdmin(tipo,infos){
             }
             novo_dado_cadastro += '}'
             new_dado_cadastro = JSON.parse(novo_dado_cadastro);
-            let tam = veiculos.veiculos.lenght;
+            tam = veiculos.veiculos.lenght;
             veiculos.veiculos[tam] = new_dado_cadastro;
             break
         case "visitante":
@@ -186,7 +192,7 @@ function cadastrarAdmin(tipo,infos){
             }
             novo_dado_cadastro += '}'
             new_dado_cadastro = JSON.parse(novo_dado_cadastro);
-            let tam = veiculos.veiculos.lenght;
+            tam = veiculos.veiculos.lenght;
             veiculos.veiculos[tam] = new_dado_cadastro;
             break
         case "estacionamento":
@@ -197,8 +203,20 @@ function cadastrarAdmin(tipo,infos){
             }
             novo_dado_cadastro += '}'
             new_dado_cadastro = JSON.parse(novo_dado_cadastro);
-            let tam = veiculos.veiculos.lenght;
+            tam = veiculos.veiculos.lenght;
             veiculos.veiculos[tam] = new_dado_cadastro;
             break
+    }
+}
+
+function aprovarContestacao(num){
+    var confirma = confirm("Aprovar a contestação?");
+    var ths = 'const' + num;
+    if(confirma){
+        var r = document.getElementById(ths);
+        r.innerHTML = 'YES';
+    }else{
+        var r = document.getElementById(ths);
+        r.innerHTML = 'NO';
     }
 }

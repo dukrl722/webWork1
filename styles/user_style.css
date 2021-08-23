@@ -15,31 +15,46 @@ body {
     border: 1px solid black;
 }
 
-
-#dv1 {
-    width: 70%;
-    height: 90%;
+#user_info {
+    width: 50%;
+    height: 50%;
     color: white;
     background-color: rgb(27, 26, 23);
     border: 2px solid black;
     margin-top: 5%;
 }
 
-#dv1 #signup {
-    width: 70%;
+#multas {
+    border: 2px solid black;
+    background-color: whitesmoke;
+    color:rgb(27, 26, 23);
+    width: 95%;
     height: 50%;
-    text-align: center;
-}
-#dv1 #signup input {
-    width: 70%;
-    margin-left: 30%;
     margin-top: 5%;
-    font-size: medium;
+    margin-bottom: 5%;
+    position: relative;
 }
 
-#butao{
+#multas table{
+    margin-top: 1%;
+}
+
+#multas table, tr, th, td {
+    text-align: left;
+    font-size: medium;
+    border: 1px solid black;
+}
+
+#formul {
+    position: relative;
+    display: block;
+    width: 50%;
     margin: 0;
-    margin-top: 5%;
+    margin-top: 15%;
+}
+#botao_{
+    margin: 0;
+    margin-top: 3%;
 }
 
 #rodape{

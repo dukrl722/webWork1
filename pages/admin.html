@@ -4,57 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
+    <title>Admin Page</title>
     <link  rel="stylesheet" href="../styles/admin_style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="logo">
-        <img src="../images/utf_logo.jpg" width="600" height="200">
-    </div>
-    <nav class="navbar">
-        <a class="navbar-brand" href="index.html">Login</a>
-        <a class="navbar-brand" href="cadastro.html">Cadastro</a>
-    </nav>
-    <div id="_info_">
-        <table>
-            <tr>
-                <th>Username</th>
-                <th>Usertype</th>
-            </tr>
-            <tr>
-                <td>Admin</td>
-                <td>Servidor</td>
-            </tr>
-        </table>
-    </div>
-    <div id="home_div">
-        <h1>Pagina da Administração</h1>
-        <ul>
-            <h2>Opções de Cadastro</h2>
-            <li>Veiculos</li>
-            <li>Servidores</li>
-            <li>Alunos</li>
-            <li>Visitantes</li>
-            <li>Estacionamento</li>
-        </ul>
-        <p>Escreva a baixo as informações a despeito do cadastro</p>
-        <textarea id="entrada_dados" style="width: 50%;"></textarea>
-        <div class="enter">
-            <input id="tipo_de_cadastro" type="text" placeholder="Choose one of the options above">
-            <button onclick="verificaCadastroAdmin()">Click</button>
+    <div id="telatotal">
+        <div id="logo">
+            <nav class="navbar">
+                <div>
+                    <a href="index.html">
+                        <img src="../images/utf_logo.jpg" alt="logo_utf" width="300" height="100">
+                    </a>
+                </div>
+                <h1>Serviço de controle de estacionamento UTFPR</h1>
+                <a class="navbar-brand" href="index.html">Login</a>
+                <a class="navbar-brand" href="cadastro.html">Cadastro</a>
+            </nav>
         </div>
-    </div>
-    <div id="protocolos">
-        <h3>Protocolo para cada tipo de cadastro</h3>
-        <ul>
-            <li>Veiculos: tipo, modelo, fabricante, placa e cor</li>
-            <li>Servidores: nome, telefone, ramal, sala, cargo, número de matrícula, telefone, e-mail</li>
-            <li>Alunos: nome, curso, ra, telefone, e-mail</li>
-            <li>Visitantes: nome, cpf, telefone, e-mail</li>
-            <li>Estacionamento: id, descrição</li>
-        </ul>
+
+        <div id="_info_" class="row">
+            <table class="table-dark">
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Usertype</th>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Servidor DESEG</td>
+                </tr>
+            </table>
+        </div>
+        <div id="home_div" class="container col-sm-8 col-md-4">
+            <div class="row">
+                <h2>Cadastro de elementos</h2>
+                <p>Cadastros possiveis: veiculos, servidores, alunos, visitantes, estacionamento</p>
+                <a href="./cadastros/cadastro.html">Pagina de cadastros</a>
+            </div>
+        </div>
+        
+        <div id="ocorrencia" class="container col-sm-8 col-md-4">
+            <h1>Seção de ocorrências</h1>
+            <div class="row">
+                <p>Mapa do estacionamento<br>Selecione o estacionamento desejado para registro de uma ocorrência</p>
+            </div>
+            <div class="row">
+                <img src="../images/utf_estacionamento.jpg" alt="estacionamento_utf" width="100%" height="30%" usemap="#parking">
+                <map name="parking">
+                    <area shape="rect" coords="436,381,540,442" alt="estac1" href="./cadastros/ocorrencias.html">
+                </map>
+            </div>
+
+            <div id="tabela_ocorrencia" class="container">
+                <p style="width: 100%;"><strong>Tabela de Ocorrencias</strong></p>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Id Multa</th>
+                        <th>Data Multa</th>
+                        <th>Multado</th>
+                        <th>Descrição</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>20-08-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="ocorrence">Veículo se sobrepôs a calçada</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>28-08-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="ocorrence">Estacionamento em espaço não permitido</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>04-09-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="ocorrence">Veículo agrediu poste de luz</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th>12-09-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="ocorrence">Estacionamento em espaço não permitido</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="tabela_contesta" class="container">
+                <p style="width: 100%;"><strong>Tabela de Contestações</strong></p>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Id Multa</th>
+                        <th>Data Contestação</th>
+                        <th>Contestador</th>
+                        <th>Objeção</th>
+                        <th>Aprovada?</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>17-09-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="contestacao">Nada a haver, tem meu nome alí</th>
+                        <th id="const1" onclick="aprovarContestacao(1)">NO</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>18-09-2019</th>
+                        <th>Josivaldo</th>
+                        <th class="contestacao">Não era um poste de luz</th>
+                        <th id="const2" onclick="aprovarContestacao(2)">YES</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer id="rodape">
+            <p>Universidade Tecnológica Federal do Paraná</p>
+            <a href="http://www.google.com" target="_blank">Suporte ao usuário</a>
+        </footer>
     </div>
     <script type="text/javascript" src="../controllers/control.js"></script>
 </body>

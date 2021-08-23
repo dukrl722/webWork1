@@ -1,17 +1,25 @@
+PADRÃO DAS PÁGINAS PARA CCH DE WEB
+
+<a class="navbar-brand" href="index.html">Login</a>
+            <a class="navbar-brand" href="cadastro.html">Cadastro</a>
+--------------------------------------
+	<<< HTML >>>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
-    <link  rel="stylesheet" href="../styles/signup_style.css">
+    <title>Tela de Usuário</title>
+    <!-- Arquivo CSS próprio -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="telatotal">
-        <div id="logo">
+	<div id="logo">
             <nav class="navbar">
                 <div>
                     <a href="index.html">
@@ -19,32 +27,59 @@
                     </a>
                 </div>
                 <h1>Serviço de controle de estacionamento UTFPR</h1>
-                <a class="navbar-brand" href="index.html">Login</a>
+                <a class="navbar-brand" href="admin.html">ADM</a>
             </nav>
         </div>
-        <div id="dv1" class="container">
-            <div class="row" style="margin-left: 20%;">
-                <h1>Cadastro de Usuário</h1>
-            </div>
-            <div class="row" id="signup">
-                <div class="col">
-                    <input id="signup_name" type="text" placeholder="Username">
-                    <br>
-                    <input id="signup_pass" type="password" placeholder="Password">
-                    <br>
-                    <input id="signup_re_pass" type="password" placeholder="Repeat password">
-                    <br>
-                </div>
-                <div id="butao">
-                    <button type="submit" onclick="setNewUser()">Cadastrar</button>
-                </div>
-            </div>
-        </div>
-        <footer id="rodape">
+
+	<!-- 
+	Resto
+	-->
+
+	<footer id="rodape">
             <p>Universidade Tecnológica Federal do Paraná</p>
             <a href="google.com" target="_blank">Suporte ao usuário</a>
         </footer>
     </div>
-    <script type="text/javascript" src="../controllers/control.js"></script>
+    <!-- Tag <script> com arquivo próprio -->
 </body>
 </html>
+
+----------------------------------
+	<< CSS >>
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#telatotal{
+    background-color: rgb(19, 19, 19);
+    width: 100%;
+    height: 100%
+}
+
+#logo{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(42, 31, 102);
+    border: 1px solid black;
+}
+
+#dv1{
+    width: 50%;
+    height: 50%;
+    color: white;
+    background-color: rgb(27, 26, 23);
+    border: 2px solid black;
+    margin-top: 5%;
+}
+
+/*Resto do CSS*/
+
+#rodape{
+    color: white;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+#rodape a:link{
+    text-decoration: none;
+    color: white; 
+}

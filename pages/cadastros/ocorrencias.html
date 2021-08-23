@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estacionamento</title>
+    <link rel="stylesheet" href="../../styles/ocorrencias.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="telatotal">
+        <div id="logo">
+            <nav class="navbar">
+                <div>
+                    <a href="index.html">
+                        <img src="../../images/utf_logo.jpg" alt="logo_utf" width="300" height="100">
+                    </a>
+                </div>
+                <h1>Serviço de controle de estacionamento UTFPR</h1>
+                <a class="navbar-brand" href="../admin.html">ADM</a>
+                <a class="navbar-brand" href="../cadastro.html">Cadastro</a>
+            </nav>
+        </div>
+    
+        <div id="dv1" class="container">
+            <div class="row" style="margin-left: 20%;">
+                <h1>Cadastros em Estacionamentos</h1>
+            </div>
+
+            <div id="perfil_placa" class="container">
+                <div class="col">
+                    <p>Pesquisar perfís por placa de veículo</p>
+                    <input type="text" name="placa_num" id="placa_num" placeholder="Insira aqui a placa do veículo">
+                    <br>
+                    <input type="submit" name="botao_placa" onclick="encontraPerfilPlaca()">
+                </div>
+            </div>
+
+            <div id="park" class="container">
+                <div id="registrar_ocorrencia" class="row">
+                    <p>Registrar Ocorrência</p>
+                    <form action="#">
+                        <input type="text" name="placadocarro" id="placadocarro" placeholder="Insira placa de carro">
+                        <input type="text" name="estacios" value="1">
+                        <input type="text" name="observacao" id="observacao" placeholder="Insira observações sobre a ocorrência">
+                        <input type="file" name="fotoveiculo" id="fotoveiculo" placeholder="Insira a foto do veículo">
+                        <input type="text" name="momentoocorr" id="momentoocorr" placeholder="Discorra sobre o momento da ocorrência">
+                        <br>
+                        <input onclick="avaliarOcorrencia()" type="submit" style="width: 15%;height: 25%;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <footer id="rodape">
+                <p>Universidade Tecnológica Federal do Paraná</p>
+                <a href="http://www.google.com" target="_blank">Suporte ao usuário</a>
+            </footer>
+        </div>
+        <script src="../../controllers/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Usuário</title>
+    <link rel="stylesheet" href="../../styles/user_style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body onload="determinaUsuario(3)">
+    <div id="telatotal">
+        <div id="logo">
+            <nav class="navbar">
+                <div>
+                    <a href="../index.html">
+                        <img src="../../images/utf_logo.jpg" alt="logo_utf" width="300" height="100">
+                    </a>
+                </div>
+                <h1>Serviço de controle de estacionamento UTFPR</h1>
+                <a class="navbar-brand" href="../cadastro.html">Cadastro</a>
+            </nav>
+        </div>
+        <div id="user_info" class="container">
+            <div class="row">
+                <div class="col"><h2>Informações</h2></div>
+            </div>
+            <div class="row">
+                <strong><div id="nome" class="col"> <label>Nome:</label> </div></strong>
+            </div>
+            <div class="row">
+                <strong><div id="senha" class="col"> <label>Senha:</label> </div></strong>
+            </div>
+            <div class="row">
+                <strong><div id="tipo" class="col"> <label>Tipo:</label> </div></strong>
+            </div>
+            <div class="row">
+                <strong><div id="carro" class="col"><label>Placa do Carro:</label></div></strong>
+            </div>
+
+            <div id="multas" class="container">
+                <div class="row">
+                    <div class="col"><strong>Multas e Contestações</strong></div>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th>Id Multa</th>
+                            <th>Data Multa</th>
+                            <th>Descrição</th>
+                            <th>Constetada?</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th>Id Multa</th>
+                            <th>Data Contestação</th>
+                            <th>Resposta à multa</th>
+                            <th>Aprovada?</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+
+            <div id="formul" class="container">
+                <div class="row">
+                    <p>Edição de dados pessoais</p>
+                </div>
+                <div class="row">
+                    <label>Dado a editar</label>
+                    <input type="text" name="chose_data" id="chose_data">
+                </div>
+                <div class="row">
+                    <label>Edição de dados</label>
+                    <input type="text" name="new_data" id="new_data">
+                </div>
+                <div id="botao_">
+                    <button onclick="carregarNovoDado()">Modificar dado</button>
+                </div>
+            </div>
+        </div>
+        <footer id="rodape">
+            <p>Universidade Tecnológica Federal do Paraná</p>
+            <a href="http://www.google.com" target="_blank">Suporte ao usuário</a>
+        </footer>
+    </div>
+    <script type="text/javascript" src="../../controllers/user_control.js"></script>
+</body>
+</html>

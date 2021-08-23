@@ -10,26 +10,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="logo">
-        <img src="../images/utf_logo.jpg" width="600" height="200">
-    </div>
-    <nav class="navbar">
-        <a class="navbar-brand" href="cadastro.html">Cadastro</a>
-        <a class="navbar-brand" href="admin.html">.</a>
-    </nav>
-    <div id="dv1">
-        <h1>Sistema do estacionamento - UTPFR Dois Vizinhos</h1>
-        <div id="login">
-            <form action="admin.html" method="GET">
-                <label>Login: </label>
-                <input id="login_name" type="text">
-                <br>
-                <label>Senha: </label>
-                <input id="login_pass" type="password">
-                <br>
-                <button onclick="checkLogin()">Entrar</button>
-            </form>
+    <div id="telatotal">
+        <div id="logo" class="container-fluid col-sm-2 col-md-8">
+            <nav class="navbar">
+                <div class="row">
+                    <a href="index.html">
+                        <img src="../images/utf_logo.jpg" alt="logo_utf" width="300" height="100">
+                    </a>
+                </div>
+                <h1>Serviço de controle de estacionamento UTFPR</h1>
+                <a class="navbar-brand" href="cadastro.html">Cadastro</a>
+                <a class="navbar-brand" href="admin.html">.</a>
+            </nav>
         </div>
+        <div id="dv1" class="container">
+            <div class="row">
+                <h1>Login de Usuário</h1>
+            </div>
+            <div class="row" id="login">
+                <input id="login_name" type="text" placeholder="Insira seu usuário">
+                <br>
+                <input id="login_pass" type="password" placeholder="Insira sua senha">
+                <script>
+                    const dataUser = checkLogin();
+                    let nameURL = '';
+                    if (dataUser == 0) {
+                        nameURL = 'admin.html';
+                    } else if (dataUser == 2) {
+                        nameURL = 'user1.html';
+                    } else if (dataUser == 3) {
+                        nameURL = 'user1.html';
+                    }else {
+                        nameURL = 'user.html';
+                    }
+                    document.write('<button type="submit" href="' + nameURL + '">Entrar</button>');
+                </script>
+            </div>
+        </div>
+        <footer id="rodape">
+            <p>Universidade Tecnológica Federal do Paraná</p>
+            <a href="google.com" target="_blank">Suporte ao usuário</a>
+        </footer>
     </div>
     <script type="text/javascript" src="../controllers/control.js"></script>
 </body>
