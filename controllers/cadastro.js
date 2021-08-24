@@ -20,19 +20,26 @@ function encontraPerfilPlaca(){
 
 function avaliarOcorrencia(){
     var pc, obs, fv, mo;
+    var form = document.getElementById("formCadastro");
     pc = document.getElementById("placadocarro").value;
     obs = document.getElementById("observacao").value;
     fv = document.getElementById("fotoveiculo").value;
     mo = document.getElementById("momentoocorr").value;
     if(pc == ''){
-        alert("Por favor, insira uma placa de carro");
-        return;
+        form.addEventListener('submit', function(e) {
+            alert("Por favor, insira uma placa de carro");
+            e.preventDefault();
+        });
+        return false;
     }
     if(fv == ''){
-        alert("Por favor, insira uma foto do veículo");
-        return;
+        form.addEventListener('submit', function(e) {
+            alert("Por favor, insira uma foto do veículo");
+            e.preventDefault();
+        });
+        return false;
     }
 
     alert("Ocorrencia enviada");
-    return;
+    return true;
 }

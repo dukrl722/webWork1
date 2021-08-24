@@ -33,15 +33,16 @@ function determinaUsuario(num){
 }
 
 function carregarNovoDado(){
-    var bt = document.querySelector('button');
+    var nome = document.getElementById("nome");
+    var senha = document.getElementById("senha");
     var dados = document.getElementById("new_data").value;
     var tipo_data = document.getElementById("chose_data").value;
     if(tipo_data == 'nome'){
-        nome.innerHTML = x + dados;
+        nome.innerHTML = 'Nome: ' + dados;
         alert("Modificação realizada com sucesso");
     }
     else if(tipo_data == 'senha'){
-        senha.innerHTML = y + dados;
+        senha.innerHTML = 'Senha: ' + dados;
         alert("Modificação realizada com sucesso");
     }
     else{

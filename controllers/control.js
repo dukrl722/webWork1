@@ -12,7 +12,7 @@ var users = `{"users":[
     },
     {
         "name":"Josivaldo",
-        "senha":'mingaucomleite',
+        "senha":"mingaucomleite",
         "type":1
     },
     {
@@ -37,57 +37,6 @@ var veicles = `{"veiculos":[
     }
 ]}`
 
-var srevis = `{"servidores":[
-    {
-        "nome":"Josivaldo Pereira dos Santos",
-        "telefone":"94002-8922",
-        "ramal":"None",
-        "sala":"3D",
-        "cargo":"professor",
-        "e-mail":"josivaldo123@hotmail.com"
-    }
-]}`
-
-var students = `{"alunos":[
-    {
-        "nome":"Lucas Lenoch de Souza",
-        "curso":"Engenaria de Software",
-        "ra":"2152983",
-        "telefone":"99121-4739",
-        "e-mail":"lucas@lucaslenoch.com.br"
-    }
-]}`
-
-var visits = `{"visitantes":[
-    {
-        "nome":"Seu Zé",
-        "cpf":"Não sei",
-        "telefone":"Perdi",
-        "e-mail":"Num tenho"
-    },
-    {
-        "nome":"Reginaldo Abreu",
-        "cpf":"032.123.76-89",
-        "telefone":"98477-9090",
-        "e-mail":"reginaldoabreu@gmail.com"
-    }
-]}`
-
-var estacis = `{"estacionamentos":[
-    {
-        "id":"13",
-        "descricao":"Reservado para servidores da UTF"
-    }
-]}`
-
-var usuarios = JSON.parse(users)
-var veiculos = JSON.parse(veicles)
-var servidores = JSON.parse(srevis)
-var alunos = JSON.parse(students)
-var visitantes = JSON.parse(visits)
-var estacionamentos = JSON.parse(estacis)
-
-
 //-----------------------------------------------
 
 function userTypeCheck(cbox){
@@ -101,6 +50,7 @@ function userTypeCheck(cbox){
 }
 
 function setNewUser(){
+    var usuarios = JSON.parse(users);
     var n = document.getElementById("signup_name").value;
     var s = document.getElementById("signup_pass").value;
     var rs = document.getElementById("signup_re_pass").value;
@@ -125,6 +75,7 @@ function setNewUser(){
 }
 
 function checkLogin(){
+    var usuarios = JSON.parse(users);
     var n = document.getElementById("login_name").value;
     var s = document.getElementById("login_pass").value;
     var vetor = usuarios.users;
@@ -150,6 +101,7 @@ function verificaCadastroAdmin(){
 
 function cadastrarAdmin(tipo,infos){
     var words = infos.split(",").length;
+    var veiculos = JSON.parse(veicles);
     switch(tipo){
         case "veiculo":
             var novo_dado_cadastro = `{`
