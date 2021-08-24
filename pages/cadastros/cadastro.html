@@ -28,7 +28,7 @@
         <h1>Cadastros para funcionários DESEG</h1>
         <div class="row" id="veiculos">
             <h2>Veículos</h2>
-            <form action="#">
+            <form action="#" id="formVeiculos">
                 <label>Tipo</label>
                 <input type="text" name="tipo" style="margin-left: 20%;">
                 <label>Modelo</label>
@@ -36,15 +36,30 @@
                 <label>Fabricante</label>
                 <input type="text" name="fabricante" style="margin-left: 20%;">
                 <label>Placa</label>
-                <input type="text" name="placa" style="margin-left: 20%;">
+                <input type="text" name="placa" id="placa" style="margin-left: 20%;">
                 <label>Cor</label>
                 <input type="text" name="cor" style="margin-left: 20%;">
-                <input type="submit" name="bt_veiculo">
+                <input type="submit" name="bt_veiculo" onclick="validateV()">
+                <script>
+                    function validateV() {
+                        const placa = document.getElementById('placa');
+                        let form = document.getElementById('formVeiculos');
+                        if (placa.value == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira um valor para a placa');
+                                e.preventDefault();
+                            });
+                        }
+
+                        alert("Dados registrados com sucesso.");
+                        return true;
+                    }
+                </script>
             </form>
         </div>
         <div class="row" id="servidores">
             <h2>Servidores</h2>
-            <form action="#">
+            <form action="#" id="formServidores">
                 <label>Nome</label>
                 <input type="text" name="s_nome" style="margin-left: 20%;">
                 <label>Telefone</label>
@@ -58,13 +73,42 @@
                 <label>Matricula</label>
                 <input type="text" name="numero_matricula" style="margin-left: 20%;">
                 <label>E-mail</label>
-                <input type="text" name="s_email" style="margin-left: 20%;">
-                <input type="submit" name="bt_servidor">
+                <input type="email" name="s_email" style="margin-left: 20%;">
+                <input type="submit" name="bt_servidor" onclick="validateS()">
+                <script>
+                    function validateS() {
+                        const name = document.querySelector('input[name="s_nome"]');
+                        const email = document.querySelector('input[name="s_email"]');
+                        const cargo = document.querySelector('input[name="cargo"]');
+                        let form = document.getElementById('formServidores');
+                        if (name == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o nome.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (email == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o email.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (cargo == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o cargo.');
+                                e.preventDefault();
+                            });
+                        }
+
+                        alert("Dados registrados com sucesso.");
+                        return true;
+                    }
+                </script>
             </form>
         </div>
         <div class="row" id="alunos">
             <h2>Alunos</h2>
-            <form action="#">
+            <form action="#" id="formAlunos">
                 <label>Nome</label>
                 <input type="text" name="a_nome" style="margin-left: 20%;">
                 <label>Curso</label>
@@ -75,12 +119,41 @@
                 <input type="text" name="a_telefone" style="margin-left: 20%;">
                 <label>E-mail</label>
                 <input type="text" name="a_email" style="margin-left: 20%;">
-                <input type="submit" name="bt_aluno">
+                <input type="submit" name="bt_aluno" onclick="validateA()">
+                <script>
+                    function validateA() {
+                        const name = document.querySelector('input[name="a_nome"]');
+                        const email = document.querySelector('input[name="a_email"]');
+                        const ra = document.querySelector('input[name="ra"]');
+                        let form = document.getElementById('formAlunos');
+                        if (name == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o nome.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (email == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o email.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (ra == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o RA.');
+                                e.preventDefault();
+                            });
+                        }
+
+                        alert("Dados registrados com sucesso.");
+                        return true;
+                    }
+                </script>
             </form>
         </div>
         <div class="row" id="visitantes">
             <h2>Visitantes</h2>
-            <form action="#">
+            <form action="#" id="formVisitantes">
                 <label>Nome</label>
                 <input type="text" name="v_nome" style="margin-left: 20%;">
                 <label>CPF</label>
@@ -89,17 +162,61 @@
                 <input type="text" name="v_telefone" style="margin-left: 20%;">
                 <label>E-mail</label>
                 <input type="text" name="v_email" style="margin-left: 20%;">
-                <input type="submit" name="bt_visitante">
+                <input type="submit" name="bt_visitante" onclick="validateG()">
+                <script>
+                    function validateG() {
+                        const name = document.querySelector('input[name="v_nome"]');
+                        const email = document.querySelector('input[name="v_email"]');
+                        let form = document.getElementById('formVisitantes');
+                        if (name == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o nome.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (email == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o email.');
+                                e.preventDefault();
+                            });
+                        }
+
+                        alert("Dados registrados com sucesso.");
+                        return true;
+                    }
+                </script>
             </form>
         </div>
         <div class="row" id="visitantes">
             <h2>Estacionamentos</h2>
-            <form action="#">
+            <form action="#" id="formEstacionamento">
                 <label>ID</label>
                 <input type="text" name="id" style="margin-left: 20%;">
                 <label>Descrição</label>
                 <input type="text" name="descricao" style="margin-left: 20%;">
-                <input type="submit" name="bt_estacionamento">
+                <input type="submit" name="bt_estacionamento" onclick="valitadeE()">
+                <script>
+                    function validateE() {
+                        const name = document.querySelector('input[name="descricao"]');
+                        const id = document.querySelector('input[name="id"]');
+                        let form = document.getElementById('formEstacionamento');
+                        if (name == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira a descrição.');
+                                e.preventDefault();
+                            });
+                        }
+                        if (id == '') {
+                            form.addEventListener('submit', function(e) {
+                                alert('Insira o ID.');
+                                e.preventDefault();
+                            });
+                        }
+
+                        alert("Dados registrados com sucesso.");
+                        return true;
+                    }
+                </script>
             </form>
         </div>
     </div>
